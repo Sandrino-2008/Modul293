@@ -1,0 +1,31 @@
+/** {
+  padding: 0;
+  margin: 0;
+}*/
+
+h1 {
+  text-align: center;
+}
+
+.list-item {
+  display: block;
+}
+
+footer {
+  text-align: center;
+}
+
+section {
+  background-color: beige;
+  height: 440px;
+}
+
+img {
+  height: auto;
+  width: 20%;
+}
+
+a {
+  text-decoration: none;
+  color: red;
+}

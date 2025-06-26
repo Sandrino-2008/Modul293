@@ -1,0 +1,46 @@
+:root {
+  --primary-color: rgb(129, 0, 185);
+  --text-color: aliceblue;
+  --btn-bg: white;
+  --btn-text: black;
+}
+
+body {
+  background-color: #000000 !important;
+  color: var(--text-color);
+}
+
+.title {
+  color: var(--primary-color);
+  text-shadow: 2px 2px 5px rgba(198, 0, 224, 0.806);
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.card {
+  background-color: var(--primary-color);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.card-title,
+.card-text {
+  color: var(--text-color);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.btn {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+}
+
+  .btn:hover {
+    background-color: rgba(109, 109, 109, 0.836);
+    color: aliceblue;
+  }

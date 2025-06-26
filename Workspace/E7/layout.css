@@ -1,0 +1,139 @@
+/* Global */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f5f5f5;
+  padding: 10px;
+}
+
+/*GRID LAYOUT*/
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "nav main sidebar"
+    "footer footer footer";
+  gap: 15px;
+}
+
+/*Einzelne Grid-Bereiche mit sichtbarem Rahmen*/
+
+.header,
+.nav,
+.main,
+.sidebar,
+.footer {
+  border: 3px solid #333;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.header {
+  grid-area: header;
+  background-color: #d0e6ff;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav {
+  grid-area: nav;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #ffe0b2;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #c8e6c9;
+  text-align: center;
+}
+
+/*FLEXBOX-NAVIGATION*/
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  background-color: #90caf9;
+  color: #000;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  display: block;
+}
+
+/*FLEXBOX-INHALT*/
+
+.main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card {
+  background-color: steelblue;
+  color: white;
+  padding: 20px;
+  border-radius: 6px;
+  text-align: center;
+  flex: 1;
+}
+
+/*RESPONSIVE BREAKPOINTS*/
+
+/* Tablet: ab 600px */
+@media (min-width: 600px) {
+  .nav-list {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .main {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    flex: 1 1 calc(50% - 10px);
+  }
+}
+
+/* Desktop: ab 900px */
+@media (min-width: 900px) {
+  .grid-container {
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-areas:
+      "header  header   header"
+      "nav     main     sidebar"
+      "footer  footer   footer";
+  }
+
+  .main {
+    flex-wrap: nowrap;
+  }
+
+  .card {
+    flex: 1 1 30%;
+  }
+
+  .nav-list {
+    justify-content: flex-start;
+    gap: 20px;
+  }
+}
